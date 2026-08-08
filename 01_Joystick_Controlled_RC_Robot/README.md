@@ -354,3 +354,12 @@ This project was developed as part of the **Summer Internship Programme (SIP) at
 
 The project provided hands-on experience in robotics, embedded systems, wireless communication, motor control, and hardware integration.
 
+## Media
+
+### Robot and Joystick
+
+![Robot and Joystick](media/robot_and_joystick.jpg)
+
+### Demonstration Video
+
+[Watch the robot demonstration video](media/robot_demo.mp4)
