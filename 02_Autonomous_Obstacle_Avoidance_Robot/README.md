@@ -1671,3 +1671,76 @@ The system uses a reactive navigation strategy rather than predefined paths. It 
 The addition of turn-history-based loop detection improves the robot's behavior in environments where simple left-right obstacle avoidance could otherwise result in repeated navigation cycles. When such a pattern is detected, the robot performs a 180° U-turn and attempts to continue navigation from a different direction.
 
 Overall, the project demonstrates the complete development cycle of a small autonomous robot, including hardware integration, electrical connections, embedded programming, sensor interfacing, actuator control, power management, debugging, calibration, and autonomous navigation.
+
+## Dynamic Environment Demonstration
+
+Two identical autonomous obstacle-avoidance robots were developed and deployed together in a custom-built **circular dynamic environment** for testing.
+
+The environment was designed with obstacles of different shapes and positions to evaluate how the robots respond to changing surroundings.
+
+### Environment Setup
+
+The test environment consists of:
+
+- A circular operating area
+- Multiple obstacles with different shapes
+- Obstacles placed at different positions
+- Two autonomous obstacle-avoidance robots
+- Dynamic movement and changing obstacle conditions
+
+### Testing
+
+Both robots were placed inside the circular environment and operated autonomously.
+
+Each robot:
+
+1. Moves forward without manual control.
+2. Continuously detects obstacles using the HC-SR04 ultrasonic sensor.
+3. Slows down when approaching an obstacle.
+4. Stops when an obstacle reaches the safety distance.
+5. Scans the surrounding area using the servo-mounted ultrasonic sensor.
+6. Compares the available space on the left and right.
+7. Selects a suitable direction.
+8. Performs an approximately 90° turn.
+9. Continues navigating through the environment.
+10. Uses the turn-history mechanism to reduce repeated left-right turning.
+11. Performs a 180° U-turn when a loop condition is detected.
+
+### Dynamic Environment Test
+
+The purpose of this demonstration was to evaluate the robots under a more challenging environment rather than testing them only with a single static obstacle.
+
+The different obstacle shapes and positions required the robots to repeatedly detect, evaluate, and react to their surroundings.
+
+The deployment of two robots also demonstrated that the obstacle-avoidance algorithm could operate independently on multiple robots in the same environment.
+
+### Demonstration Video
+
+The complete demonstration of the two autonomous robots operating in the dynamic environment is available below:
+
+[Watch the Dynamic Environment Demonstration](media/Dynamic_Env.mp4)
+
+### Test Environment
+
+```text
+              Circular Dynamic Environment
+
+                 ┌─────────────────┐
+             ┌───┘                 └───┐
+           /                             \
+          /       ▲          █            \
+         /                                     \
+        |          🤖 Robot 1                  |
+        |                                      |
+        |              ●                       |
+        |                         ◆            |
+        |                                      |
+        |     █          🤖 Robot 2            |
+         \                                    /
+          \          ▲                       /
+           \                               /
+             └───────────────────────────┘
+
+        ▲  █  ●  ◆
+        Different obstacle shapes
+```
