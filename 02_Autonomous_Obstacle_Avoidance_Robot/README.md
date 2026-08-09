@@ -1744,3 +1744,12 @@ The complete demonstration of the two autonomous robots operating in the dynamic
         ▲  █  ●  ◆
         Different obstacle shapes
 ```
+## Robots
+
+### Robot 1
+
+![Autonomous Obstacle Avoidance Robot 1](media/obstacle_avoidance_robot_1.jpg)
+
+### Robot 2
+
+![Autonomous Obstacle Avoidance Robot 2](media/obstacle_avoidance_robot_2.jpg)
